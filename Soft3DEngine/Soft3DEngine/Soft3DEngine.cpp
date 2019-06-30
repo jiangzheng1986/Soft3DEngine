@@ -6,8 +6,46 @@ ATOM				MyRegisterClass(HINSTANCE hInstance);
 BOOL				InitInstance(HINSTANCE, int);
 LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
 
+int FindLastChar(const WCHAR *String, WCHAR Char)
+{
+	int i = 0;
+	int LastFound = -1;
+	const WCHAR *String1 = String;
+	while (true)
+	{
+		WCHAR Char1 = *String1++;
+		if (Char1 == Char)
+		{
+			LastFound = i;
+		}
+		if (Char1 == '\0')
+		{
+			return LastFound;
+		}
+		i++;
+	}
+}
+
+void GetDirectoryOfPath(WCHAR *Path1, const WCHAR *Path)
+{
+	wcscpy(Path1, Path);
+	int LastFound1 = FindLastChar(Path1, '/');
+	int LastFound2 = FindLastChar(Path1, '\\');
+	int LastFound = MAX_(LastFound1, LastFound2);
+	if (LastFound != -1)
+	{
+		Path1[LastFound] = 0;
+	}
+}
+
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+	WCHAR ProgramPath_UTF16[1000];
+	GetModuleFileNameW(nullptr, ProgramPath_UTF16, 1000);
+	WCHAR ProgramDirectory_UTF16[1000];
+	GetDirectoryOfPath(ProgramDirectory_UTF16, ProgramPath_UTF16);
+	SetCurrentDirectoryW((WCHAR *)ProgramDirectory_UTF16);
+
 	MSG msg;
 
 	MyRegisterClass(hInstance);
