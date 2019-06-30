@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Math">
+      <UniqueIdentifier>{2f343415-6756-4831-90e6-142b00aca22e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Soft3DEngine">
+      <UniqueIdentifier>{731e286e-bd90-4e14-957d-3a4c9557cae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{241767f8-0cdb-4f63-a194-e0d62dd53422}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Math\_Math.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\tagMatrix4.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\tagVector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\tagVector4.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Soft3DEngine.cpp" />
+    <ClCompile Include="Soft3DEngine\CTexture.cpp">
+      <Filter>Soft3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Soft3DEngine\tagVertex.cpp">
+      <Filter>Soft3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Soft3DEngine\CCamera.cpp">
+      <Filter>Soft3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Soft3DEngine\CDevice.cpp">
+      <Filter>Soft3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\CGame.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Soft3DEngine\Lighting.cpp">
+      <Filter>Soft3DEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Math\_Math.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\tagMatrix4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\tagVector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\tagVector4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers.h" />
+    <ClInclude Include="Soft3DEngine.h" />
+    <ClInclude Include="Soft3DEngine\CTexture.h">
+      <Filter>Soft3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Soft3DEngine\tagVertex.h">
+      <Filter>Soft3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Soft3DEngine\CCamera.h">
+      <Filter>Soft3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Soft3DEngine\CDevice.h">
+      <Filter>Soft3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\CGame.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Soft3DEngine\Lighting.h">
+      <Filter>Soft3DEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
