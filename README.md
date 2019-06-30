@@ -1,4 +1,4 @@
 # Soft3DEngine
-A software renderer for education purpose.
+A software renderer for educational purpose.
 
 ![ScreenShot](ScreenShot.png)
